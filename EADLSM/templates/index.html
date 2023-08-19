@@ -1,0 +1,483 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>india map</title>
+    <link rel="stylesheet" href="{% static 'CSS/map.css' %}">
+
+    <style type="text/css">
+        @media only screen and (max-width: 660px) {
+            div.main {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+        <div id="preloader">
+            <video autoplay muted src="{% static 'IMG/LANDING_MAP_PHOTOS/earth.mp4' %}"></video>    
+        </div> 
+        <canvas id='c'></canvas>
+        <div class="main">
+            
+            <div class="background">
+                <div class="container-top">
+                    <div class="ecell-logo">
+                        <img src="{% static 'IMG/EAD_LOGOS/Copy of E-Cell Logo (White).png' %}" alt="">
+                    </div>
+                </div>
+                <div class="left">
+                    <div class="container-centre">
+                        <div class="map1" style="display: block;" id="map1">
+                            <img style="opacity: .8;"  src="{% static 'IMG\LANDING_MAP_PHOTOS\india_map.png' %}" alt="">
+
+
+                            
+                            <span class="pin" id="pin1" style="top: 55%; left: 17.5%;"> <!-- mumbai -->
+                                
+
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Mumbai' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box"  data-box="box1">
+                                        <a href="#">EAD Mumbai</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <div class="pin" id="pin2" style="top: 57%; left: 20%;"> <!-- pune -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Pune' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box"  data-box="box2">
+                                        <a href="#">EAD Pune</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </div>
+                            <div class="pin" style="top: 53%; left: 32%;"> <!-- nagpur -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Nagpur' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Nagpur</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </div>
+        
+                            <div class="pin" style="top: 55%; left: 26%;"> <!--Aaurangabad -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Aurangabad' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Ch. Sambhaji Nagar</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </div>
+                            <span class="pin" style="top: 59%; left: 28%;"> <!-- hyderabad -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Hyderabad' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Hyderabad</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 58%; left: 43%;"> <!-- Vishakhapatnam -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Vishakhapatnam' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Vishakhapatnam</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 72%; left: 35.25%;"> <!-- chennai -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Chennai' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Chennai</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 78%; left: 27.5%;"> <!-- coimbatore -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Coimbatore' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Coimbatore</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 80%; left: 26%;"> <!-- kochi -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Kochi' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Kochi'</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 45%; left: 15%;"> <!-- ahemdabad -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Ahemdabad' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Ahemdabad</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 45%; left: 24.5%;"> <!-- indore -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Indore' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Indore</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 44.5%; left: 28.5%;"> <!-- bhopal -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Bhopal' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Bhopal</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 44%; left: 34%;"> <!-- jabalpur -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Jabalpur' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Jabalpur</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 44.5%; left: 44%;"> <!-- jamshedpur -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Jamshedpur' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Jamshedpur</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 51%; left: 39%;"> <!-- raipur -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Raipur' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD aipur</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 51.5%; left: 50.5%;"> <!-- bhubaneshwar -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Bhubaneswar' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Bhubaneswar</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 45%; left: 52%;"> <!-- ranchi -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Ranchi' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Ranchi</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 47%; left: 55%;"> <!-- kolkata -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Kolkata' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Kolkata</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 35%; left: 57%;"> <!-- siliguri -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Siliguri' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Siliguri</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 36%; left: 63%;"> <!-- guwahati -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Guwahati' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Mumbai</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 33%; left: 40%;"> <!-- gorakhpur -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Gorakhpur' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Gorakhpur</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 32.5%; left: 37%;"> <!-- lucknow -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Lucknow' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Lucknow</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 37%; left: 38%;"> <!-- prayagraj -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Prayagraj' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Prayagraj</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 39%; left: 48%;"> <!-- patna -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Patna' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Patna</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 36.5%; left: 32%;"> <!-- kanpur -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Kanpur' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Kanpur</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 33.5%; left: 22%;"> <!-- jaipur -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Jaipur' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Jaipur</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 29%; left: 28%;"> <!-- delhi -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Delhi' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Delhi</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 28.5%; left: 30.5%;"> <!-- noida -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Noida' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Noida</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 23.5%; left: 29.5%;"> <!-- dehradun -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Dehradun' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Dehradun</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                            <span class="pin" style="top: 22%; left: 26.6%;"> <!-- chandigarh -->
+                                <a href="{% url 'EAD_LSM:city_detail' city_name='Chandigarh' %}">
+                                    <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                                </a>
+
+
+                                <div class="box">
+                                        <a href="#">EAD Chandigarh</a>
+                                        <p>Date: </p>
+                                        <p>Venue: Pimpri Chinchwad Incubation Centre</p>
+                                    </div>
+                            </span>
+                        </div>
+                        <div class="map2" style="display: none;" id="map2">
+                            <img style="opacity: .8;" src="{% static 'IMG/LANDING_MAP_PHOTOS/india_map.png' %}" alt="">
+                            <span class="pin" style="top: 55%; left: 24.5%;"> <!-- mumbai -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+        
+                            <!-- <div class="pin-container"> -->
+                            <span class="pin" style="top: 57%; left: 27%;"> <!-- pune -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+                            <!-- </div> -->
+        
+                            <span class="pin" style="top: 53%; left: 39%;"> <!-- nagpur -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+                            <span class="pin" style="top: 59%; left: 35%;"> <!-- hyderabad -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+        
+                            <span class="pin" style="top: 72%; left: 42.25%;"> <!-- chennai -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+                            <span class="pin" style="top: 73%; left: 34.25%;"> <!-- bengaluru -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+        
+                            <span class="pin" style="top: 45%; left: 31.5%;"> <!-- indore -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+                            <span class="pin" style="top: 47%; left: 62%;"> <!-- kolkata -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+                            <span class="pin" style="top: 33.5%; left: 29%;"> <!-- jaipur -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+                            <span class="pin" style="top: 29%; left: 35%;"> <!-- delhi -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+                            <span class="pin" style="top: 30.5%; left: 33.5%;"> <!-- gurugram -->
+                                <img src="{% static 'IMG/LANDING_MAP_PHOTOS/pin.png' %}" style="height: 100%;">
+                            </span>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="right">
+                    
+                    <div class="container-left">
+                        <div class="ead-logo">
+                            <img src="{% static 'IMG/LANDING_MAP_PHOTOS/new ead logo.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="container-right">
+                        <div class="lsm-logo">
+                            <img src="{% static 'IMG/LANDING_MAP_PHOTOS/Copy of LSM Logo (Colour).png' %}" alt="">
+                        </div>
+                    </div>
+                    <!-- <div class="container-buttons" >
+                        <button class="button-logo" id="button1">EAD</button>
+                        <button class="button-logo" id="button2">LSM</button>
+                    </div> -->
+                    <div class="middle">
+                        <h1>EAD</h1>
+                        <label class="toggle-switch" for="toggle-switch">
+                            <input type="checkbox" id="toggle-switch">
+                            <div class="slider"></div>
+                        </label>
+                        <h1>LSM</h1>
+                    </div>
+                </div>
+            </div>
+             
+        </div>
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+
+</html>

@@ -1,0 +1,234 @@
+/* NAV BAR CSS */
+@media screen and (min-width: 991px) {
+    .hero-subheading-load {
+        translate: 0 -10vw;
+    }
+
+
+}
+
+.nav-link {
+    color: black !important;
+    font-weight: 500 !important;
+}
+
+.underline-hover {
+    background-color: black !important;
+    width: 0%;
+    height: 1.39px !important;
+    margin-top: 4px;
+}
+
+.nav-button {
+    color: black !important;
+    font-weight: 500 !important;
+    margin-top: 12px;
+
+}
+
+.nav-col-right {
+    justify-content: flex-start !important;
+}
+
+#Quick_linksid {
+    font-family: 'Poppins', sans-serif;
+}
+
+@media screen and (max-width: 991px) {
+    #Lsm_Heading_Line {
+        font-size: 30px !important;
+        text-align: center;
+        margin: auto;
+    }
+
+    #Ead_Heading_Line {
+        font-size: 30px !important;
+        text-align: center;
+        margin: auto;
+        line-height: 1.21;
+    }
+
+    #Entrepreneurshipcell_heading {
+        font-size: 4.5vw;
+    }
+
+    .nav-col-right {
+        flex-direction: column;
+        flex: 0 auto;
+        justify-content: center !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .btn-txt-style {
+        font-weight: 500 !important;
+        font-size: 1rem;
+    }
+}
+
+/* ENDS HERE  */
+
+footer {
+    background-color: rgb(17, 17, 17);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+footer>* {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer div.ecell-footer-logo {
+    text-align: center;
+}
+
+footer div.ecell-footer-logo img {
+    width: 30rem;
+}
+
+div.social-links a {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: rgb(17, 17, 17) !important;
+    background-color: #A7A9AC;
+}
+
+div.social-links * {
+    text-decoration: none;
+}
+
+div.social-links a:hover {
+    color: white !important;
+}
+
+div.social-links a.fa-facebook:hover {
+    background-color: #4267B2;
+}
+
+div.social-links a.fa-instagram:hover {
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%) !important;
+}
+
+div.social-links a.fa-twitter:hover {
+    background-color: #1DA1F2;
+}
+
+div.social-links a.fa-linkedin:hover {
+    background-color: #1DA1F2
+}
+
+div.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.social-links a {
+    margin: 0.5rem;
+}
+
+footer div.footer-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    color: white;
+}
+
+footer div.footer-container>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer div.footer-container a {
+    color: white;
+    text-decoration: none;
+
+}
+
+footer div.footer-container div.quick-links {
+    border-right: 2px solid white;
+
+}
+
+footer div.footer-container>div.quick-links>* {
+    margin: 0.5rem;
+    line-height: 155%;
+    font-size: 118%;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+footer div.footer-container div.quick-links p,
+footer div.footer-container div h3 {
+    margin: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+div.chirag>*,
+div.abhisar>* {
+    font-size: 1.12rem;
+    line-height: 1.5;
+}
+
+footer div.footer-container div.quick-links p {
+    font-size: 150%;
+}
+
+
+
+footer div.footer-container>div>div {
+    margin: 0.7rem;
+}
+
+footer div.footer-container>div>div>* {
+    margin: 0.5rem;
+
+}
+
+footer div.footer-container img {
+    border: 4px solid white;
+    border-radius: 50%;
+    width: 10rem;
+}
+
+@media screen and (max-width: 540px) {
+    footer div.ecell-footer-logo img {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    footer div.footer-container {
+        grid-template-columns: auto auto;
+    }
+
+    footer div.quick-links {
+        grid-column: span 2;
+        border-right: none !important;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    footer div.footer-container {
+        grid-template-columns: auto;
+    }
+
+    footer div.quick-links {
+        grid-column: span 1;
+    }
+
+    footer div.footer-container>div {
+        margin-bottom: 3rem;
+    }
+}

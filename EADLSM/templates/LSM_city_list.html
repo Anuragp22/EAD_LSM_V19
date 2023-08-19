@@ -1,0 +1,9 @@
+<h1>List of Cities</h1>
+
+<ul>
+  {% for LSMcity in Lsm_cities %}
+    <li><a href="{% url 'EAD_LSM:LSM_CITY_Detail' LSMcity.name %}">{{ LSMcity.name }}</a></li>
+  
+  {% endfor %}
+</ul>
+
