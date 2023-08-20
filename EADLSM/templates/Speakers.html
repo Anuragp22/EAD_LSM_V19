@@ -540,6 +540,10 @@
       .nav-col-left {
         padding-left: 0;
       }
+      .logo img{ 
+        padding-left: 0;
+        width: 50%;
+      }
 
       .incheq-logo-mobile {
         width: 3.75rem;
@@ -750,8 +754,9 @@
     <div data-animation="default" class="navbar-mobile w-nav" data-easing2="ease" data-easing="ease"
         data-collapse="medium" role="banner" data-no-scroll="1" data-duration="2000" data-doc-height="1">
         <div class="navbar-mobile-top">
-            <div class="nav-col-left"><a href="/cities/{{city_name}}" aria-current="page" class="logo w-nav-brand w--current"><img
-                        src="{% static 'IMG\EAD_LOGOS\Copy of Logo (1).png' %}" loading="lazy" alt="" class="incheq-logo-mobile" /></a></div>
+            <div class="nav-col-left"><a href="/cities/{{city_name}}" aria-current="page" class="logo w-nav-brand w--current">
+              <img src="{% static 'IMG\EAD_LOGOS\Copy of Logo (1).png' %}" loading="lazy" alt="" class="incheq-logo-mobile" 
+              style="width: 50%;"/></a></div>
             <div data-w-id="d6880418-3012-7173-5472-9326497b8ed9" class="nav-col-right">
                 <div class="nav-burger-close">
                     <div class="burger-menu-line-x"></div>
@@ -840,24 +845,30 @@
         </div>
     </div>
   <div class="main-wrapper">
-    <section class="section-hero-blog">
+    <section class="section-hero-blog" style="padding-top: 10px;">
       <div class="container-custom">
         <div class="hero-heading-wrap is-centred">
           <!-- <div class="category-pill-hero is-green"
             style="transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;">
             <div class="category-pill-txt">Blog</div>
           </div> -->
-          <h1
-            style="opacity: 1; transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
-            class="h1 is-hero">Speakers<span class="span-colour-green"></span></h1>
           <div class="hero-subheading-txt is-large">
-            <div
-              style="opacity: 1; transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+            <h1
+            style="opacity: 1; transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; "
+            class="h1 is-hero">Speakers<span class="span-colour-green"></span></h1>
+            <h1
+            style="opacity: 1; transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; font-size: 1.5em; "
+            class="h1 is-hero">Insights to keep you informed and inspired on your journey to create
+            organisational change.<span class="span-colour-green"></span></h1>
+            <!-- <div
+              style="opacity: 1; transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; text-align: center;"
               class="hero-subheading-load">
-              <div class="body-large">Insights to keep you informed and inspired on your journey to create
+              <div class="body-large" style="margin-top: 5em;">Insights to keep you informed and inspired on your journey to create
                 organisational change.</div>
-            </div>
+            </div> -->
           </div>
+          
+          
         </div>
       </div>
     </section>
@@ -1154,19 +1165,134 @@
         <div class="Speaker_single_card">
           <div class="imgBx">
             <img
+              src="{% static 'IMG\EAD_LSM SPEAKERS\ashneer-grover.jpg' %}"
+              alt="" />
+          </div>
+          <div class="content">
+            <div class="contentBx">
+              <h3>Ashneer Grover <br /><span>MD & Co-Founder BharatPe</span></h3>
+            </div>
+            <ul class="sci">
+              <li style="--i: 1">
+                <a href="https://www.instagram.com/ashneer.grover/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 2">
+                <a href="https://twitter.com/Ashneer_Grover"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 3">
+                <a href="https://in.linkedin.com/in/ashneer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Speaker_single_card">
+          <div class="imgBx">
+            <img
               src="{% static 'IMG\EAD_LSM SPEAKERS\1657520498-Myproject372.jpg' %}"
               alt="" />
           </div>
           <div class="content">
             <div class="contentBx">
-              <h3>Ashneer Grover <br /><span>Web Developer</span></h3>
+              <h3>Alak Pandey <br /><span>CEO and Founder, Physics Wallah</span></h3>
+            </div>
+            <ul class="sci">
+              <li style="--i: 1">
+                <a href="https://www.instagram.com/physicswallah/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 2">
+                <a href="https://twitter.com/physicswallahap?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 3">
+                <a href="https://in.linkedin.com/in/alakh-pandey-4baaa8227"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Speaker_single_card">
+          <div class="imgBx">
+            <img
+              src="{% static 'IMG\EAD_LSM SPEAKERS\ashish_arora.png' %}"
+              alt="" style="transform: translate(-40%, -40%);" />
+          </div>
+          <div class="content">
+            <div class="contentBx">
+              <h3>Ashish Arora <br /><span>SVP & National Head Academics, Unacademy</span></h3>
+            </div>
+            <ul class="sci">
+              <li style="--i: 1">
+                <a href="https://instagram.com/ashisharora_physicsgalaxy?igshid=MmU2YjMzNjRlOQ=="><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 2">
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 3">
+                <a href="https://www.linkedin.com/in/ashish-arora-09866337"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Speaker_single_card">
+          <div class="imgBx" >
+            <img
+              src="{% static 'IMG\EAD_LSM SPEAKERS\arjunmalhotra.jpg' %}"
+              alt="" style="transform: translate(-40%, -37.5%);"/>
+          </div>
+          <div class="content">
+            <div class="contentBx">
+              <h3>Arjun Malhotra <br /><span>Co-Founder, HCL Group</span></h3>
             </div>
             <ul class="sci">
               <li style="--i: 1">
                 <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
               </li>
               <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 3">
+                <a href="https://www.linkedin.com/in/arjun-malhotra-5b07005/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Speaker_single_card">
+          <div class="imgBx">
+            <img
+              src="{% static 'IMG\EAD_LSM SPEAKERS\karthi kumar.png' %}"
+              alt="" style="transform: translate(-50%, -38%);" />
+          </div>
+          <div class="content">
+            <div class="contentBx">
+              <h3>Karthi Kumar Marshan <br /><span>CMO, Kotak</span></h3>
+            </div>
+            <ul class="sci">
+              <li style="--i: 1">
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 2">
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 3">
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Speaker_single_card">
+          <div class="imgBx" style="transform: scaleX(1.2);">
+            <img
+              src="{% static 'IMG\EAD_LSM SPEAKERS\ritesh agarwal.png' %}"
+              alt="" />
+          </div>
+          <div class="content">
+            <div class="contentBx">
+              <h3>Ritesh Agarwal <br /><span>CEO, OYO Rooms</span></h3>
+            </div>
+            <ul class="sci">
+              <li style="--i: 1">
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </li>
+              <li style="--i: 2">
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
               </li>
               <li style="--i: 3">
                 <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -1177,19 +1303,19 @@
         <div class="Speaker_single_card">
           <div class="imgBx">
             <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
+              src="{% static 'IMG\EAD_LSM SPEAKERS\mikhil.jpeg' %}"
+              alt="" style="scale: 0.9; transform: translate(-55%, -50%);"/>
           </div>
           <div class="content">
             <div class="contentBx">
-              <h3>Alak Pandey <br /><span>Web Developer</span></h3>
+              <h3>Mikhil Innani<br /><span>MD & CEO Apollo Finvest, Co-Founder Pharmeasy</span></h3>
             </div>
             <ul class="sci">
               <li style="--i: 1">
                 <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
               </li>
               <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
               </li>
               <li style="--i: 3">
                 <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -1200,180 +1326,19 @@
         <div class="Speaker_single_card">
           <div class="imgBx">
             <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
+              src="{% static 'IMG\EAD_LSM SPEAKERS\suresh prabhu.jpg' %}"
+              alt="" style="scale: 0.8; transform: translate(-63%, -60%);" />
           </div>
           <div class="content">
             <div class="contentBx">
-              <h3>Ashish Arora <br /><span>Web Developer</span></h3>
+              <h3>Suresh Prabhu <br /><span>Former Minister of Railways of India</span></h3>
             </div>
             <ul class="sci">
               <li style="--i: 1">
                 <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
               </li>
               <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 3">
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="Speaker_single_card">
-          <div class="imgBx">
-            <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>Arjun Malhotra <br /><span>Web Developer</span></h3>
-            </div>
-            <ul class="sci">
-              <li style="--i: 1">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 3">
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="Speaker_single_card">
-          <div class="imgBx">
-            <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>Karthi Kumar Marshan <br /><span>Web Developer</span></h3>
-            </div>
-            <ul class="sci">
-              <li style="--i: 1">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 3">
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="Speaker_single_card">
-          <div class="imgBx">
-            <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>Ritesh Agarwal <br /><span>Web Developer</span></h3>
-            </div>
-            <ul class="sci">
-              <li style="--i: 1">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 3">
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="Speaker_single_card">
-          <div class="imgBx">
-            <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>John <br /><span>Web Developer</span></h3>
-            </div>
-            <ul class="sci">
-              <li style="--i: 1">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 3">
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="Speaker_single_card">
-          <div class="imgBx">
-            <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>John <br /><span>Web Developer</span></h3>
-            </div>
-            <ul class="sci">
-              <li style="--i: 1">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 3">
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="Speaker_single_card">
-          <div class="imgBx">
-            <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>John <br /><span>Web Developer</span></h3>
-            </div>
-            <ul class="sci">
-              <li style="--i: 1">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 3">
-                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="Speaker_single_card">
-          <div class="imgBx">
-            <img
-              src="https://images.pexels.com/photos/3379933/pexels-photo-3379933.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-              alt="" />
-          </div>
-          <div class="content">
-            <div class="contentBx">
-              <h3>John <br /><span>Web Developer</span></h3>
-            </div>
-            <ul class="sci">
-              <li style="--i: 1">
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-              </li>
-              <li style="--i: 2">
-                <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
               </li>
               <li style="--i: 3">
                 <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -1617,10 +1582,10 @@
       <!-- <div class="logo"><img src="{% static 'img/E-Cell Logo (White).png' %}" alt=""></div> -->
       <div class="ecell-footer-logo"><img src="{% static 'IMG\EAD_LOGOS\Copy of E-Cell Logo (White).png' %}" alt=""></div>
       <div class="social-links">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-linkedin"></a>
+        <a href="https://www.facebook.com/ecell.iitkgp/" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/iitkgp_ecell/" class="fa fa-instagram"></a>
+        <a href="https://twitter.com/ecelliitkgp?lang=en" class="fa fa-twitter"></a>
+        <a href="https://www.linkedin.com/company/ecellkgp/mycompany/" class="fa fa-linkedin"></a>
       </div>
       <div class="footer-container">
         <div class="quick-links" id="Quick_linksid">
@@ -1647,8 +1612,8 @@
             <a href="mailto:chirag.agarwal@ecell-iitkgp.org">chirag.agarwal@ecell-iitkgp.org</a>
           </div>
           <div class="social-links">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-linkedin"></a>
+            <a href="https://m.facebook.com/people/Chirag-Agarwal/100073920122197/" class="fa fa-facebook"></a>
+            <a href="https://in.linkedin.com/in/chirag-agarwal-5bb7ba22b" class="fa fa-linkedin"></a>
           </div>
         </div>
         <div class="abhisar">
@@ -1662,11 +1627,11 @@
           </div>
           <div class="contact">
             <p>8638595832</p>
-            <a href="mailto:chirag.agarwal@ecell-iitkgp.org">chirag.agarwal@ecell-iitkgp.org</a>
+            <a href="mailto:abhisar.upadhyay@ecell-iitkgp.org">abhisar.upadhyay@ecell-iitkgp.org</a>
           </div>
           <div class="social-links">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-linkedin"></a>
+            <a href="https://www.facebook.com/profile.php?id=100076172946190" class="fa fa-facebook"></a>
+            <a href="https://in.linkedin.com/in/abhisar-upadhyay-005819225" class="fa fa-linkedin"></a>
           </div>
         </div>
       </div>
